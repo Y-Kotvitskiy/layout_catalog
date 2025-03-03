@@ -1,3 +1,11 @@
+@mixin hover($property, $to-value) {
+  transition: #{$property} $transition-duration;
+
+  &:hover {
+    #{$property}: $to-value;
+  }
+}
+
 @mixin on-mobile {
   @media (min-width: $mobile-width) {
     @content;

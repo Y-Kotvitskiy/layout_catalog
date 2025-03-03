@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
 
+  @include hover(transform, scale(1.2));
+
   &__image {
     width: 160px;
     height: 134px;
@@ -19,8 +21,13 @@
     line-height: 150%;
     font-weight: 500;
     color: $cart-color-main;
+    transition: color $transition-duration;
 
     @include card-padding-inline;
+  }
+
+  &:hover &__title {
+    color: $cart-color-hover;
   }
 
   &__code {
@@ -89,6 +96,8 @@
     font-weight: 700;
     color: #fff;
     background-color: #00acdc;
+
+    transition: $transition-duration;
 
     &:hover {
       color: #00acdc;
