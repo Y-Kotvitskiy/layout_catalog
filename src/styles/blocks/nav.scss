@@ -1,7 +1,12 @@
 .nav {
 
   &__list {
-    display: flex;
+    display: none;
+
+    @include on-tablet {
+      display: flex;
+    }
+
   }
 
   &__link {
@@ -23,11 +28,11 @@
   }
 
   &__link:hover {
-    color: var(--header-active-color);
+    color: $header-active-color;
   }
 
   &__link.is-active {
-    color: var(--header-active-color);
+    color: $header-active-color;
   }
 
   &__link.is-active::after {
