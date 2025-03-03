@@ -47,7 +47,7 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     box-sizing: border-box;
 
     @include card-padding-inline;
@@ -86,8 +86,11 @@
   }
 
   &__buy {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     margin-top: 16px;
-    width: 160px;
+    width: 166px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -96,6 +99,7 @@
     font-weight: 700;
     color: #fff;
     background-color: #00acdc;
+    text-transform: uppercase;
 
     transition: $transition-duration;
 
